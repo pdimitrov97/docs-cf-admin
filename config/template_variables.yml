@@ -1,0 +1,290 @@
+---
+template_variables:
+  # Book variables
+  api_version: "259"
+  book_title: VMware Tanzu Documentation
+  book_title_short: VMware Tanzu Docs
+  current_major_version: "2.12"
+  domain_name: pivotal.io
+  ga_account_id: UA-39702075-1
+  global_header_product_href: https://network.pivotal.io/
+  global_header_product_link_text: Downloads
+  gtm_account_id: GTM-MW4LZHR
+  hero_text: "Detailed documentation to help you install, understand, and succeed with VMware Tanzu enterprise-grade software."
+  path_to_partials: /pcf
+  product_link: <div class="header-item"><a href="https://network.pivotal.io/products/pivotal-cf">Back to Product Page</a></div>
+  product_network: VMware Tanzu Network
+  product_url: https://network.pivotal.io/products/pivotal-cf
+  support_call_to_action: <a href="https://pivotal.io/support" target="_blank">Need Support?</a>
+  support_link: <a href="https://pivotal.io/support" target="_blank">Support</a>
+  support_url: https://pivotal.io/support
+  title: <span class="title-deemph">VMware Tanzu</span> Documentation
+  title_image: images/icon-p-green.jpg
+  url_path: https://docs.pivotal.io/application-service/2-12
+  use_global_header: true
+  v_major_version: "v2.12"
+
+# Tanzu product variables
+  app_runtime: TAS for VMs
+  app_runtime_abbr: TAS for VMs
+  app_runtime_abbr_lc: tas
+  app_runtime_first: VMware Tanzu Application Service for VMs (TAS for VMs)
+  app_runtime_full: VMware Tanzu Application Service for VMs
+  company_name: VMware
+  k8s_runtime_abbr: TKGI
+  k8s_runtime_full: Tanzu Kubernetes Grid Integrated Edition
+  ops_manager: Ops Manager
+  ops_manager_full: Ops Manager
+  platform_code: PCF
+  platform_name: Ops Manager
+  platform_old: Pivotal Cloud Foundry
+  product_full: Ops Manager
+  product_name: Pivotal Platform # Deprecated -- do not use
+  product_name_lc: pcf
+  segment_runtime_full: Isolation Segment
+  windows_runtime_abbr: TAS for VMs &#91;Windows&#93;
+  windows_runtime_full: VMware Tanzu Application Service for VMs &#91;Windows&#93;
+
+# Pivotal variables
+  app_runtime_abbr_lc_pivotal: pas
+  app_runtime_abbr_pivotal: PAS
+  app_runtime_full_pivotal: Pivotal Application Service
+  app_runtime_pivotal: Application Service
+  company_name_pivotal: Pivotal
+  k8s_runtime_abbr_pivotal: TKGI
+  k8s_runtime_full_pivotal: Enterprise Pivotal Container Service
+  k8s_runtime_pivotal: Tanzu Kubernetes Grid Integrated Edition
+  ops_manager_full_pivotal: Pivotal Operations Manager
+  ops_manager_pivotal: Ops Manager
+  platform_code_pivotal: PCF
+  platform_name_pivotal: Pivotal Platform
+  platform_old_pivotal: Pivotal Cloud Foundry
+  product_name_lc_pivotal: pcf
+  windows_runtime_abbr_pivotal: PASW
+  windows_runtime_full_pivotal: Pivotal Application Service for Windows
+
+# Variables needed for dev-guide and buildpacks, which are published to PWS as well as Tanzu and OSS.
+# Otherwise, they are deprecated and should be replaced with Tanzu product variables.
+  product_runtime: VMware Tanzu Application Service for VMs
+  product_short: TAS for VMs
+
+# Book content variables
+  add_volumes_link: For more information, see [Enabling Volume Services](../../opsguide/enable-vol-services.html).
+  admin: Ops Manager admin
+  admin_read_only_role: "<ul><li><strong>Admin Read-Only</strong>: Read-only access to all Cloud Controller API resources. Assigned the <code>cloud_controller.admin_read_only</code> scope in UAA.</li></ul>"
+  admin_role: "<ul><li><strong>Admin</strong>: Perform operational actions on all orgs and spaces using the Cloud Controller API. Assigned the <code>cloud_controller.admin</code> scope in UAA.</li></ul>"
+  api_endpoint: <a href="https://docs.pivotal.io/platform/opsguide/api-endpoint.html">the URL of the Cloud Controller in your TAS for VMs instance</a>
+  api_endpoint_book: For more information, see [Identifying the API Endpoint for Your TAS for VMs Instance](https://docs.pivotal.io/platform/opsguide/api-endpoint.html).
+  api_v1_format: <a href="https://docs.pivotal.io/platform/services/api-v1.html">v1 format</a>
+  api_v2_format: <a href="https://docs.pivotal.io/platform/services/api.html">v2 format</a>
+  api_version: To determine your Cloud Controller API version, see [Identifying the API Endpoint for Your TAS for VMs Instance](https://docs.pivotal.io/platform/opsguide/api-endpoint.html).
+  app_domain: shared-domain.example.com
+  app_graceful_shutdown_config: If your apps require a longer period of time to finish in-flight jobs and gracefully shut down, you can increase the graceful shutdown period. For more information, see the [Configure Advanced Features](https://docs.pivotal.io/application-service/2-12/operating/configure-pas.html#advanced) section of the _Configuring TAS for VMs_ topic.
+  app_healthcheck_timeout: In Ops Manager, the default timeout is 60 seconds and the maximum configurable timeout is 600 seconds. You can modify the timeout in the **App Containers** pane of the VMware Tanzu Application Service for VMs (TAS for VMs) tile.
+  app_log_limit_config: For more information, see <a href="https://docs.pivotal.io/application-service/2-10/overview/release-notes/runtime-rn.html#app-log-limit">Configure App Log Rate Limit (Beta)</a> in the _TAS for VMs v2.10 Release Notes_.
+  app_logging_footnote: <a href="https://docs.pivotal.io/platform/devguide/deploy-apps/streaming-logs.html">App Logging in TAS for VMs</a>
+  app_man_network: <p class='note'><strong>Note:</strong> You can also create and modify container-to-container networking policies using Apps Manager. For more information, see <a href="https://docs.pivotal.io/platform/console/manage-apps.html#networking">Create Container-to-Container Networking Policies</a> in the <em>Managing Apps and Service Instances Using Apps Manager</em> topic.</p>
+  app_rate_log_limit_config: the **App log rate limit** section in the **App Containers** pane of the TAS for VMs tile
+  app_rate_log_limit_config_procedure: To configure app log rate limits, see [Configure App Containers](../operating/configure-pas.html#application-containers-config) in _Configuring TAS for VMs_.<br><br><p class='note'><strong>Note:</strong> In TAS for VMs, this rate limit is applied globally across all your apps. If only some of your apps require this setting, see <a href="../operating/installing-pcf-is.html#application_containers">App Containers</a> in <em>Installing Isolation Segment</em>.</p>
+  app_sec_groups: <a href="https://docs.pivotal.io/platform/concepts/asg.html">App Security Groups</a>
+  app_sec_groups_default: Allowing admins to configure ASGs to block outbound connections from app containers.
+  app_sec_groups_link: For information about creating and configuring ASGs, see [App Security Groups](./asg.html).
+  app_sec_groups_link_2: For information about creating and configuring ASGs, see [App Security Groups](../concepts/asg.html).
+  app_svc_links: <li><a href="../opsguide/config-ssh.html">Configuring SSH Access for TAS for VMs</a>&#58; Explains how to configure TAS for VMs to allow SSH access to app instances for debugging.</li><li><a href="../opsguide/app-sec-groups.html">Restricting App Access to Internal TAS for VMs Components</a>&#58; Details how to create ASGs, rules that allow internal outgoing communications from all apps in TAS for VMs, or the apps running in the same space.</li><li><a href="../opsguide/notifications-asg.html">Configuring App Security Groups for Email Notifications</a>&#58; Describes how to define an ASG to enable app-generated notifications.</li>
+  app_traffic_logging: Container-to-container networking enables VMware Tanzu Application Service for VMs (TAS for VMs) to generate logs whenever containers communicate or attempt to communicate with each other. For more information about managing app traffic logging, see the [App Traffic Logging](../../opsguide/logging-config-opsman.html#app-traffic-log) section of the _Configuring Logging in TAS for VMs_ topic.
+  asg_note: <p class="note"><strong>Note</strong><span>:</span> You can also view ASGs in Apps Manager under the <strong>Settings</strong> tab of a space or an app.</p>
+  asg_notifications_prereq: You also must configure [App Security Groups (ASGs)](../opsguide/notifications-asg.html).
+  autoscaler_note_dev_guide: <p class="note"><strong>Note</strong>&#58; You can configure your app to scale automatically based on rules that you set. For more information, see <a href="../../appsman-services/autoscaler/using-autoscaler.html">Scaling an App Using Autoscaler</a> and <a href="../../appsman-services/autoscaler/using-autoscaler-cli.html">Using the App Autoscaler CLI</a>.</p>
+  azs: You can configure your deployment so that Diego Cells are created across these AZs in the **Assign AZs and Networks** pane of the TAS for VMs tile.
+  billing_manager_role:
+  billing_manager_role_note:
+  blobstore_kb: For more information about the blobstore, see [How to use Elastic Runtime BLOB Storage Data](https://community.pivotal.io/s/article/How-to-use-Elastic-Runtime-BLOB-Storage-Data) in the Knowledge Base.
+  blobstore_link: <a href="https://docs.pivotal.io/platform/2-12/customizing/pas-file-storage.html">Configuring File Storage for TAS for VMs</a>
+  bosh_cli_link: For more information about using this tool, see [Advanced Troubleshooting with the BOSH CLI](https://docs.pivotal.io/ops-manager/install/trouble-advanced.html).
+  bosh_login: log-in #v1: login
+  capi_link: For more information, see the [CAPI documentation](https://v3-apidocs.cloudfoundry.org/version/3.4.0/index.html).
+  cc_logging_default:
+  cf_networking: Container-to-container networking is always enabled in TAS for VMs. For more information about how to configure container-to-container networking, see [Administering Container-to-Container Networking](../devguide/deploy-apps/cf-networking.html).
+  cfdot_kb: When logged into a VM hosting an app, you can use tools like the Cloud Foundry Diego Operator Toolkit (CFDOT) to run app status diagnostics. For more information, see [How to use Cloud Foundry Diego Operator Toolkit (CFDOT)](https://community.pivotal.io/s/article/how-to-use-cloud-foundry-cf-diego-operator-toolkit-cfdot) in the Knowledge Base.
+
+  cipher_suites: You can override the default cipher suites in the **TLS cipher suites for the Gorouter** and **Minimum version of TLS** fields in the **Networking** pane of the TAS for VMs tile. For more information about using custom SSL ciphers, see [Gorouter Only](#pass-through) or [Load Balancer and Gorouter](#lb-and-router).
+  cli_v6: <a href="https://docs.pivotal.io/platform/cf-cli/getting-started.html">Getting Started with cf CLI</a>
+  clock_vm: clock_global
+  cloud_controller_logging:
+  collector_singleton: The singleton compilation components do not affect platform availability.
+  compliance_links: <h2><a id='compliance'></a>Compliance</h2>For information about compliance in TAS for VMs, see the following topics:<br><ul><li><a href="https://docs.pivotal.io/nist/index.html">NIST Controls and VMware Tanzu Application Service for VMs</a>&#58; Provides a dedicated site that assesses TAS for VMs against NIST SP 800-53(r4) Controls.</li><li><a href="/application-service/2-12/operating/gdpr.html">General Data Protection Regulation</a>&#58; Provides an overview of the General Data Protection Regulation (GDPR) and where TAS for VMs might store personal data.</li></ul>
+  concepts_product_model_header: <h2><a id='commercial-model'></a>How TAS for VMs Differs from Open Source Cloud Foundry</h2>
+#The image below can be edited here: https://docs.google.com/drawings/d/1d0zp-fO3hUwfej3HPzSyzzz-nF2sH8SThWPedymqAmM/edit
+  concepts_product_model_image: The following diagram shows open source Cloud Foundry components in blue and commercial features available with TAS for VMs in green&#58;<br><br><img src="../overview/images/pcf-commercialization.png"><br><br><a href="https://github.com/pivotal-cf/docs-pas/blob/master/images/pcf-commercialization.png?raw=true">View a larger version of this diagram</a>.
+  concepts_product_model_link: <li><a href="#commercial-model">How TAS for VMs Differs from Open Source Cloud Foundry</a></li>
+  concepts_product_model_text: "/pcf/core/2-12/pcf_overview_model"
+  config_ssh_link: For more information, see <a href='../../operating/config-ssh.html'>Configuring SSH Access for TAS for VMs</a>.
+  configure_system_logging_link: For more information, see <a href="../operating/configure-pas.html#sys-logging">Configure System Logging</a> in <em>Configuring TAS for VMs</em>.
+  console_4: To access Apps Manager as the admin user, see [Logging In to Apps Manager](https://docs.pivotal.io/platform/2-12/customizing/console-login.html).
+  console_accounting_report: <li><a href="../opsguide/accounting-report-apps-man.html" class="subnav">Monitoring Instance Usage with Apps Manager</a></li>
+  console_ev: user role and the feature flags that the admin sets. For more information about feature flags, see [Using Feature Flags](../adminguide/listing-feature-flags.html).
+  console_links: For more information, see [Getting Started with Apps Manager](https://docs.pivotal.io/platform/console/dev-console.html) and [Managing User Accounts and Permissions Using Apps Manager](https://docs.pivotal.io/platform/console/console-roles.html).
+  contact_support: Contact [Support](https://support.pivotal.io) if you need assistance.
+  container_network_link: For information about administering container-to-container network policies, see [Administering Container-to-Container Networking](../devguide/deploy-apps/cf-networking.html).
+  create_orgs: <sup>&dagger;</sup>
+  create_orgs_footnote: <sup>&dagger;</sup>Defaults to no. Yes if feature flag `user_org_creation` is set to `true`.
+  cse_id: 012029519579280034868:3hzywhss5ik
+  custom_load_balancer: For more information, see [Using Your Own Load Balancer](https://docs.pivotal.io/platform/2-12/customizing/custom-load-balancer.html).
+  custom_metrics_footnote: <sup>4</sup>For more information about configuring an app to stream custom metrics to Loggregator, see [Metric Registrar and Custom App Metrics](../metric-registrar/index.html).
+  custom_services: If you are interested in building services for Ops Manager and making them available to end users, see <a href="https://docs.pivotal.io/platform/services/">Services</a>.
+  dea_diego_table_row: <tr><td>1.5 and below</td><td>1.6 and above</td><td>CF version numbers</td><td></td></tr>
+  dea_diego_version: Diego architecture for v1.6
+  dev_console_1: You can use either the CLI or Apps Manager to perform this task. For more information about using Apps Manager, see [Using Apps Manager](https://docs.pivotal.io/platform/console/index.html).
+  dev_console_2: CLI or <a href="https://docs.run.pivotal.io/console/index.html">Apps Manager</a>
+  dev_console_4: For more information about using Apps Manager, see [Using Apps Manager](https://docs.pivotal.io/platform/console/index.html).
+  dev_console_5: You can also bind a service using Apps Manager. For more information about using Apps Manager, see [Using Apps Manager](https://docs.pivotal.io/platform/console/index.html).
+  dev_console_note: For more information about specific Admin commands you can perform with Apps Manager, depending on your user role, see <a href="https://docs.pivotal.io/platform/console/dev-console.html">Getting Started with the Apps Manager</a>.
+  diego_ssh_link: <a href="../../concepts/diego/ssh-conceptual.html">Diego SSH package</a>
+  diego_vm_1: diego_brain
+  diego_vm_2: diego_database
+  diego_vm_3: diego_cell
+  disable_custom: <h2> <a id='disabling-custom-buildpacks'></a>Disable Custom Buildpacks </h2> Operators can choose to disable custom buildpacks. For more information, see the [Disabling Custom Buildpacks](../adminguide/buildpacks.html#disabling-custom-buildpacks) section of the _Managing Custom Buildpacks_ topic.
+  disable_custom_buildpacks: You can disable custom buildpacks using the TAS for VMs tile. In the **App Containers** pane, deselect the **Enable custom buildpacks** checkbox, as shown in the image below.<br><br><img src="images/disable-custom-buildpacks.png"><br><br>By default, the cf CLI gives developers the option of using a custom buildpack when they deploy apps to TAS for VMs. To do so, they use the `-b` option to provide a custom buildpack URL with the `cf push` command. Deselecting the **Enable custom buildpacks** checkbox prevents the `-b` option from being used with external buildpack URLs.<br><br>For more information about custom buildpacks, see [Buildpacks](../buildpacks/).
+  docker_auth: To support Docker, TAS for VMs needs the ability to access Docker registries using either a Certificate Authority or an IP address allow list. For information about configuring this access, see [Using Docker Registries](../opsguide/docker-registry.html).
+  droplet_config: <strong>Maximum staged droplets per app</strong> field in the <strong>File Storage</strong> pane of the VMware Tanzu Application Service for VMs (TAS for VMs) tile.
+  enable_c2c_discovery: open the **App Developer Controls** pane in your TAS for VMs tile and select the **Enable Service Discovery for Apps** checkbox
+  enable_docker_link: To enable Docker support, see the [Enable Docker](../../adminguide/docker.html#enable) section of the _Using Docker in TAS for VMs_ topic.
+  enable_invitations: <p class="note"><strong>Note</strong>&#58; The <strong>Enable invitations</strong> checkbox in the <strong>Apps Manager</strong> pane of the TAS for VMs tile must be enabled to invite new users.</p>
+  enable_syslog_drain: For more information, see [Configuring System Logging in TAS for VMs](../opsguide/logging-config-opsman.html).
+  example_domain: www.example.com
+  example_domain_edu: www.example.edu
+  example_domain_net: www.example.net
+  example_domain_no_www: .example.com
+  example_domain_org: www.example.org
+  example_ip_1: 192.0.2.1
+  example_ip_2: 198.51.100.1
+  example_ip_3: 203.0.113.1
+  external_ips: external IP addresses
+  external_lb: For more information, see [Using Your Own Load Balancer](https://docs.pivotal.io/platform/2-12/customizing/custom-load-balancer.html).
+  external_vol_smb_note: <p class="note"><strong>Note:</strong> If you are using VMware Tanzu Application Service for VMs &#91;Windows&#93;, see <a href="https://docs.pivotal.io/application-service-windows/2-12/smb-volumes-apps.html"> Using SMB Volumes in .NET Apps</a>.</p>
+  external_vol_win_note: <p class="note"><strong>Note:</strong> If you are using VMware Tanzu Application Service for VMs &#91;Windows&#93;, see <a href="https://docs.pivotal.io/application-service-windows/2-12/smb-volumes-apps.html"> Using SMB Volumes in .NET Apps</a>.<br>NFS is not available on Windows systems.</p>
+  find_metric_name_source_id: see [Key Performance Indicators](../overview/monitoring/kpi.html) and [Key Capacity Scaling Indicators](../overview/monitoring/key-cap-scaling.html)
+  garden_runc: <p class="note"><strong>Note</strong><span>:</span> PAS v1.8.8 and later use Garden-runC instead of Garden-Linux.</p>
+  gather_routing_logs: To SSH into the router VM, see [Advanced Troubleshooting with the BOSH CLI](https://docs.pivotal.io/platform/2-12/customizing/trouble-advanced.html#bosh-ssh). To download the router VM logs from Ops Manager, see [Monitoring VMs](https://docs.pivotal.io/platform/2-12/customizing/monitoring.html).
+  get_auditor_binary: Download the Stack Auditor binary for your OS from [Buildpack Extensions](https://network.pivotal.io/products/buildpack-extensions/) on VMware Tanzu Network.
+  global_auditor_role:  "<ul><li><strong>Global Auditor</strong>: Read-only access to all Cloud Controller API resources except for secrets, such as environment variables. The Global Auditor role cannot access those values. Assigned the <code>cloud_controller.global_auditor</code> scope in UAA.</li></ul>"
+  gorouter_client_cert: "/pcf/core/2-12/gorouter_client_cert_pcf"
+  gorouter_metrics_link: https://docs.pivotal.io/platform/2-12/monitoring/kpi.html#gorouter
+  grant_devs_c2c: open the **App Developer Controls** pane in the TAS for VMs tile and enable the **Allow space developers to manage network policies** checkbox
+  grootfs_disk_usage_link: For more information on how to calculate GrootFS disk usage in your deployment, see [Examining GrootFS Disk Usage](../adminguide/examining_grootfs_disk.html).
+  grootfs_reserved_space: Alternatively, you can configure a lower threshold for Diego Cell disk cleanup in TAS for VMs. For more information, see [Configuring Diego Cell Disk Cleanup Scheduling](../operating/config-cell-cleanup.html).
+  gsg_app_video_link: <p class="note"><strong>Note:</strong> To learn app deployment concepts, see the <a href="https://tanzu.vmware.com/tutorials/getting-started">Getting Started with VMware Tanzu Application Service</a> tutorial on the VMware Tanzu website.</p>
+  haproxy_hsts_support: You can force HTTPS-only connections by enabling HSTS on HAProxy. For more information, see the [Secure Apps Domain with HAProxy](../opsguide/securing-endpoints.html#load-balancer) section of the _Securing System and App Endpoints_ topic.
+  health_monitor_footnote: <a href="https://docs.pivotal.io/platform/monitoring/metrics.html#bosh-cf">Configuring a Monitoring System</a>
+  http_routing: For more information, see [Securing Traffic into TAS for VMs](../adminguide/securing-traffic.html).
+  human_readable_timestamp: Many TAS for VMs components include the option to use human-readable timestamps in log messages. To configure TAS for VMs to use human-readable timestamps when possible, see [Configure System Logging](../../operating/configure-pas.html#sys-logging) in _Configuring TAS for VMs_. For more information about human-readable timestamps, see [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt).
+  info_loc: In Ops Manager
+  install_isolation_segments: For more information about creating isolation segments, see [Installing Isolation Segment](https://docs.pivotal.io/platform/2-12/customizing/installing-pcf-is.html).
+  internal_domain_config: <p class="note"><strong>Note</strong>&#58; The internal domain used for service discovery is <code>apps.internal</code> by default. Operators can modify this value in <strong>App Developer Controls</strong> pane of the TAS for VMs tile.</p>
+  ipsec_note: <li>Use the <a href="https://docs.pivotal.io/addon-ipsec/index.html">IPsec add-on</a> to encrypt IP data traffic within your deployment.</li>
+  isolation_segments_create: After you install the Isolation Segment tile, you must register it with Cloud Controller. If you only install the Isolation Segment tile without registering the isolation segment it creates, Cloud Controller does not detect the isolation segment and cannot place apps on it.
+  isolation_segments_intro: To enable isolation segments, an operator must install the Isolation Segment tile by performing the procedures in [Installing Isolation Segment](https://docs.pivotal.io/platform/2-12/customizing/installing-pcf-is.html). Installing the tile creates a single isolation segment.
+  isolation_segments_note: <p class="note"><strong>Note<span>:</span></strong> The isolation segment name used in the cf CLI command must match the value specified in the <strong>Segment name</strong> field of the Isolation Segment tile. If the names do not match, Ops Manager fails to place apps in the isolation segment when apps are started or restarted in the space assigned to the isolation segment.</p>
+  isolation_segments_smoke_tests: <p class='note'><strong>Note:</strong> If you run smoke tests as a post-deploy errand in the Isolation Segment tile, the smoke tests check if your isolation segment is registered in the CCDB. If the isolation segment is not registered, the smoke tests register it in the CCDB. This eliminates the need to manually register an isolation segment with <code>cf create-isolation-segment</code>. For more information, see <a href="../operating/installing-pcf-is.html#smoke-tests">Smoke Tests</a> in <em>Installing Isolation Segment</em>.</p>
+  keepalive: For more information, see [Gorouter Back End Keep-Alive Connections](../adminguide/routing-keepalive.html).
+  keepalive_router: An operator can enable the feature by entering a non-zero value for the **Keep-alive connections for the Gorouter** field in the **Networking** pane of the TAS for VMs tile.
+  known_issues: <a href="https://docs.pivotal.io/application-service/2-10/overview/release-notes/runtime-rn.html#known-issues">Known Issues</a>
+  lb_health_chk_healthy: Unhealthy Threshold
+  link_adminguide_buildpack: For more information, see [Managing Custom Buildpacks](../adminguide/buildpacks.html).
+  loggregator_arch_link: <a href="../../loggregator/architecture.html">Loggregator Architecture</a>
+  loggregator_architecture_syslog: In VMware Tanzu Application Service for VMs (TAS for VMs) v2-12, Loggregator architecture uses Syslog Agents and removes Syslog Adapters.<br/><br/>Platform operators can also enable System Metrics Agents on all VMs deployed with TAS for VMs to collect system-level metrics.
+  loggregator_firehose_link: <a href="../../loggregator/architecture.html#firehose">Loggregator Firehose</a>
+  manage_apps_service_instances_ref: Apps Manager. See <a href="https://docs.pivotal.io/platform/console/manage-apps.html#logs">Managing Apps and Service Instances Using Apps Manager</a>.
+  manage_iso_seg_link: For more information about how to create and manage isolation segments in an Ops Manager deployment, see [Installing Isolation Segment](../operating/installing-pcf-is.html) and [Managing Isolation Segments](../adminguide/isolation-segments.html).
+  manage_roles_footnote: <sup>&Dagger;</sup>Defaults to no. Yes if feature flags `set_roles_by_username` and `unset_roles_by_username` are set to `true`.
+  manage_roles_pws_no: <sup>&Dagger;</sup>
+  manage_roles_pws_yes: <sup>&Dagger;</sup>
+  max_app_size: the maximum app file size that an admin sets in the <strong>App Developer Controls</strong> pane of the TAS for VMs tile
+  max_app_size_table: Set in the <strong>App Developer Controls</strong> pane of the TAS for VMs tile
+  max_healthcheck_timeout: <code>cc.maximum_health_check_timeout</code> has a maximum value of `600` seconds.
+  metadata_ref: You can add metadata to apps and spaces using Apps Manager. For more information, see [Managing Apps and Service Instances Using Apps Manager](https://docs.pivotal.io/platform/console/manage-apps.html). For more information about adding metadata to spaces using Apps Manager, see [Managing Orgs and Spaces Using Apps Manager](https://docs.pivotal.io/platform/console/manage-spaces.html).
+  metrics_product_ref: App Metrics. See the <a href="https://docs.pivotal.io/app-metrics/index.html">App Metrics</a> documentation.
+  multiple_certs_gorouter: To configure multiple HTTPS certificate keypairs for TAS for VMs, add each keypair along with a meaningful name in the applicable **Certificates and private keys for the Gorouter and HAProxy** fields of the **Networking** pane in TAS for VMs. For more information, see [Configure Networking](https://docs.pivotal.io/application-service/2-12/operating/configure-pas.html#networking) in _Configuring TAS for VMs_.
+  multiple_certs_haproxy: In TAS for VMs, multiple certificates configured for the Gorouter are also configured for HAProxy.
+  mutual_tls_tcp: <p class='note'><strong>Note:</strong> If you have mutual TLS app identity verification enabled, app containers accept incoming communication only from the Gorouter. This disables TCP routing. For more information, see <a href="../concepts/http-routing.html#tls-to-back-end">TLS to Apps and Other Back End Services</a> in <em>HTTP Routing</em>.</p>
+  mysql_metrics_origin: /mysql
+  mysql_metrics_origin_v2: /mysql
+  mysql_vm: mysql
+  network_policy_quota: Space Developers can add up to 50 network policies per space.
+  notifications_link: <a href="../../adminguide/notifications.html">Notification Service</a>
+  nozzle_info_link: see [Nozzles](https://docs.pivotal.io/tiledev/2-12/nozzle.html#nozzle) in _Logs, Metrics, and Nozzles_ in the Ops Manager Tile Developer Guide
+  om_resurrector_header: <h3>BOSH Resurrector</h3>
+  om_resurrector_text: <p>The BOSH Resurrector increases VMware Tanzu Application Service for VMs (TAS for VMs) availability in the following ways:</p><ul><li>Reacts to hardware failure and network disruptions by recreating VMs on active, stable hosts</li><li>Detects operating system failures by continuously monitoring VMs and recreating them as required</li><li>Continuously monitors the BOSH Agent running on each VM and recreates the VMs as required</li></ul><p>The BOSH Resurrector continuously monitors the status of all VMs in a TAS for VMs deployment. The Resurrector also monitors the BOSH Agent on each VM. If either the VM or the BOSH Agent fail, the Resurrector recreates the VM on another active host. To enable the BOSH Resurrector, see the <a href="https://docs.pivotal.io/platform/customizing/resurrector.html#enabling">Enable BOSH Resurrector</a> section of the <em>Using the BOSH Resurrector</em> topic.</p>
+  or_apps_man2: or <a href="../console/dev-console.html">Apps Manager</a>
+  or_apps_man: <span>&nbsp;</span> or <a href="../console/console-roles.html">Apps Manager</a>
+  org_roles: "Organization Manager and Organization Auditor"
+  pas_ssl_note: <p class="note"><strong>Note</strong><span>:</span> TAS for VMs does not support using <code>syslog-tls</code> or <code>https</code> with self-signed certificates. If you are running your own syslog server and want to use <code>syslog-tls</code> or <code>https</code>, you must have an SSL certificate signed by a well-known certificate authority.</p>
+  pcf_networking_is1: Go to the **Assign AZs and Networks** pane of the Isolation Segment tile to assign your isolation segment to the network you created in Step 1. For more information, see [Step 3<span>:</span> Configure the Tile](https://docs.pivotal.io/platform/2-12/customizing/installing-pcf-is.html#config) in _Installing Isolation Segment_.
+  pcf_networking_is2: Go to the **Resource Config** pane of the Isolation Segment tile and use the dropdown to set your **Router** instances to a number greater than zero. For more information, see [Step 3<span>:</span> Configure the Tile](https://docs.pivotal.io/platform/2-12/customizing/installing-pcf-is.html#config) in _Installing Isolation Segment_.
+  pcf_networking_is3: If your IaaS supports it, go to the **Resource Config** pane of the Isolation Segment tile and enter the name of your load balancer under **Load Balancers**. For more information, see [Step 3<span>:</span> Configure the Tile](https://docs.pivotal.io/platform/2-12/customizing/installing-pcf-is.html#config) in _Installing Isolation Segment_. If your IaaS does not support this configuration, you must create static IP addresses and assign them to your load balancer out of band.
+  pcf_pools: For information about configuring resource pools for Amazon Web Services, see [Amazon EC2 FAQs](https://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2) in the Amazon documentation. </br></br> For information about configuring resource pools for OpenStack, see [Manage projects and users](https://docs.openstack.org/horizon/rocky/admin/manage-projects-and-users.html) in the OpenStack documentation.</br></br>  For information about configuring resource pools for vSphere, see the [Resource Config Page](https://docs.pivotal.io/platform/customizing/vsphere-config.html#resource-config) section of the _Configuring BOSH Director on vSphere_ topic.
+  platform_metric_tool_ref: Healthwatch. See <a href="https://docs.pivotal.io/pcf-healthwatch/index.html">Healthwatch</a>.
+  platform_ssh_configuration: Ops Manager deployments control SSH access to apps at the TAS for VMs level. Additionally, TAS for VMs supports load balancing of SSH sessions with your load balancer. For information about setting SSH access for your deployment, see [Configuring SSH Access](../../opsguide/config-ssh.html).
+  pools_link: the [Ops Manager configuration topic for your IaaS](https://docs.pivotal.io/ops-manager/).
+  port_limitations: To support WebSockets, the operator must configure the load balancer correctly. Depending on the configuration, clients may have to use a different port for WebSocket connections, such as port 4443, or a different domain name. For more information, see [Supporting WebSockets](../../adminguide/supporting-websockets.html).
+  port_limitations_1: To support WebSockets, the operator must configure the load balancer correctly. Depending on the configuration, clients may have to use a different port for WebSocket connections, such as port 4443, or a different domain name. For more information, see [Supporting WebSockets](../adminguide/supporting-websockets.html).
+  private_app_domain: private-domain.example.com
+  product_url: https://network.pivotal.io/products/pivotal-cf
+  pw_policy: To configure the password policy, see [Configuring UAA Password Policy](../opsguide/pw-policy.html).
+  quota_resource: quota space
+  recommended_by: VMware
+  resurrector: To enable the Resurrector, see the following pages for your particular IaaS&#58; [AWS](https://docs.pivotal.io/platform/customizing/pcf-aws-manual-om-config.html#pcfaws-om-dirconfig), [Azure](https://docs.pivotal.io/platform/customizing/azure-om-config.html#director-config), [GCP](https://docs.pivotal.io/platform/customizing/gcp-om-config.html#director-config), [OpenStack](https://docs.pivotal.io/platform/customizing/openstack-om-config.html#director-config), or [vSphere](https://docs.pivotal.io/platform/customizing/resurrector.html).
+  roles_table: "../console/pcf_roles_table"
+  route_services_appsman1: <p class="note"><strong>Note</strong>&#58; The procedures in this topic use the Cloud Foundry Command Line Interface (cf CLI). You can also manage route services using Apps Manager. For more information, see the <a href="../console/manage-apps.html#manage-route-services">Manage Route Services</a> section of the <em>Managing Apps and Service Instances Using Apps Manager</em> topic.</p>
+  route_services_appsman2: <p class="note"><strong>Note</strong>&#58; The procedures in this topic use the Cloud Foundry Command Line Interface (cf CLI). You can also manage route services using Apps Manager. For more information, see the <a href="../../console/manage-apps.html#manage-route-services">Manage Route Services</a> section of the <em>Managing Apps and Service Instances Using Apps Manager</em> topic.</p>
+  route_services_config: <h2><a id='enabling-route-services'></a>Enabling Route Services in TAS for VMs</h2>You configure Route Services for your deployment in the TAS for VMs tile, in the **Networking** pane. For more information, see [Configuring TAS for VMs](https://docs.pivotal.io/platform/2-12/customizing/configure-pas.html).
+  router_tls_recommend: <p class='note'><strong>Note:</strong> To ensure traffic is sent to the platform securely, VMware recommends as a minimum that you terminate TLS at the Gorouter. You can optionally terminate TLS at the load balancer.</p>
+  saml_provider: Retrieve the name of your SAML provider by navigating to the TAS for VMs tile on the Ops Manager Installation Dashboard, selecting **Authentication and Enterprise SSO**, and recording the value under **Provider name**. For more information about configuring TAS for VMs for a SAML identity provider, see the [Configure TAS for VMs to Use a SAML Identity Provider](../opsguide/auth-sso.html#configure-saml) section of the _Configuring Authentication and Enterprise SSO for TAS for VMs_ topic.
+  scale_table: "/pcf/core/2-12/pcf_scale_table"
+  scaling_ert: For more information regarding rolling app deployments, see [Scaling Instances in TAS for VMs](./../opsguide/scaling-ert-components.html).
+  scaling_ert_db: For more information about scaling internal database components, see [Scaling Instances in TAS for VMs](./../opsguide/scaling-ert-components.html).
+  scaling_loggregator_link: For more information, see [Scaling Loggregator](../../loggregator/log-ops-guide.html#scaling) in _Loggregator Guide for TAS for VMs Operators_.
+  scaling_nozzles_link: For more information, see the [Scaling Nozzles](../../loggregator/log-ops-guide.html#scaling-nozzles) section of the _Loggregator Guide for TAS for VMs Operators_ topic.
+  self_signed: Before following the procedure below, the developer must obtain either the self-signed certificate or the intermediate and CA certificate(s) used to sign the deployment's certificate. The developer can obtain these certificates from the Ops Manager operator.
+  services: <a href="../../services/">services</a>
+  sharding: "/pcf/core/2-12/pcf_sharding"
+  slow_nozzle_alerts_link: For more information, see the [Slow Nozzle Alerts](../../loggregator/log-ops-guide.html#slow-noz) section of the _Loggregator Guide for TAS for VMs Operators_ topic.
+  spring_trace: images/pcf/trace.png
+  spring_trace_label: <strong>Hide Apps Manager Requests</strong>
+  ssh_marketplace_output: p-mysql  100mb MySQL databases on demand
+  ssh_marketplace_step: List the marketplace services installed as product tiles in your Ops Manager deployment. If you need to add the service as a tile, see [Adding and Deleting Products](https://docs.pivotal.io/platform/2-12/customizing/add-delete.html). In this example, you create a p-mysql service instance.
+  ssh_service: p-mysql
+  ssh_service_access_key: <br>{<br>"hostname"<span>:</span> "us-cdbr-iron-east-01.p-mysql.net",<br>"jdbcUrl"<span>:</span> "jdbc:mysql://us-cdbr-iron-east-03.p-mysql.net/ad\_b2fca6t49704585d?user=b5136e448be920\u0026password=231f435o05",<br>"name"<span>:</span> "ad\_b2fca6t49704585d",<br>"password"<span>:</span> "231f435o05",<br>"port"<span>:</span> "3306",<br>"uri"<span>:</span> "mysql://b5136e448be920:<span>231f435o05<span>@</span>us-cdbr-iron-east-03.p-mysql.net</span>:3306/ad\_b2fca6t49704585d?reconnect=true",<br>"username"<span>:</span> "b5136e448be920"<br>}<br>
+  ssh_service_host: us-cdbr-iron-east-01.p-mysql.net
+  ssh_service_plan: 100mb
+  ssl_cert_ert: <p class="note"><strong>Note</strong>&#58; Alternately, you can use the TAS for VMs Ops Manager interface to generate a certificate for you. Certificates generated in TAS for VMs are signed by the Ops Manager Certificate Authority. They are not technically self-signed, but they are sometimes referred to as "self-signed certificates" in the Ops Manager UI and throughout this documentation. For more information, see the <a href="../operating/security_config.html#ert_certgen">Generating a RSA Certificate in TAS for VMs</a> section in the <em>Providing a Certificate for Your TLS Termination Point</em> topic.</p>
+  ssl_haproxy: <tr><th>Optionally, if you are deploying HAProxy, and</th><th>Then in addition, terminate SSL/TLS at<span>:</span></th><th>Related topic and configuration procedure</th></tr><tr><td><ul><li>You would like to secure traffic to the HAProxy.</li></ul></td><td><strong>HAProxy</strong></td><td><a href="../opsguide/ssl-term-haproxy.html#haproxy">Terminating SSL/TLS at HAProxy</a></td></tr>
+  ssl_haproxy_2: <p class="note"><strong>Note</strong><span>:</span> If you are using HAProxy in a TAS for VMs deployment, you can choose to terminate SSL/TLS at HAProxy in addition to any of the SSL/TLS termination options above. For more information, see <a href="ssl-term-haproxy.html">Configuring SSL/TLS Termination at HAProxy</a>.</p>
+  ssl_termin_gorouter: "/pcf/core/2-12/ssl_termin_gorouter_pcf"
+  ssl_termin_gorouter_lb: "/pcf/core/2-12/ssl_termin_gorouter_lb_pcf"
+  ssl_termin_lb_only: "/pcf/core/2-12/ssl_termin_lb_only_pcf"
+  supporting_websockets: By default, TAS for VMs assigns port 443 for TCP/WebSocket communications. If you have configured your load balancer to use a port other than 443 for TCP/WebSocket traffic, you must edit the **Loggregator port** field in the **Networking** pane of the TAS for VMs tile.
+  suspended_roles_table: "../console/pcf_suspended_roles_table"
+  switchboard_url: <code>http<span>s</span>://BOSH-JOB-INDEX-proxy-p-mysql-ert.YOUR-SYSTEM-DOMAIN</code>
+  syslog_forwarding_ref: Syslog forwarding. See <a href="https://docs.pivotal.io/platform/devguide/services/log-management.html">Streaming App Logs to Log Management Services</a>.
+  tas_networking: To configure the names of the cookies, see [Configure Networking](../operating/configure-pas.html#networking) in _Configuring TAS for VMs_.
+  tasks_ai: <p class="note"><strong>Note</strong>&#58; Running a task consumes an app instance and is billed accordingly.</p>
+  tcp_app_domain: tcp.shared-domain.example.com
+  tcp_emitter_oauth_creds: Record the **Tcp Emitter Credentials** from the **UAA** row in the TAS for VMs **Credentials** tab.
+  tcp_iaas: To configure your IP addresses for your TAS for VMs deployment, follow the procedure for enabling TCP routing in [Configure Networking](../operating/configure-pas.html#networking) in _Configuring TAS for VMs_.
+  tcp_port: "/pcf/core/2-12/tcp_port_review"
+  tiledev_link: <p class="note"><strong>Note</strong><span>:</span> To develop service brokers and service tiles for Ops Manager, see the <a href="https://docs.pivotal.io/tiledev">Ops Manager Tile Developer Guide</a>.</p>
+  uaa_admin_client_creds: Record the **Admin Client Credentials** from the **UAA** row in the TAS for VMs **Credentials** tab.
+  uaa_cli: For more information, see [Creating and Managing Users with the UAA CLI (UAAC)](../../uaa/uaa-user-management.html) and [Orgs, Spaces, Roles, and Permissions](../../concepts/roles.html).
+  uaa_cred: see the **Credentials** tab in the TAS for VMs tile
+  upload_custom_buildpacks: You can also use the <code>cf create-buildpack</code> command to upload the buildpack into your deployment, making it accessible without the <code>-b</code>. Run flag&#58; <pre>cf create-buildpack BUILDPACK PATH POSITION</pre> <p>Where flag&#58;</p> <ul><li><code>BUILDPACK</code> specifies the buildpack name.</li><li><code>PATH</code> specifies the location of the buildpack. <code>PATH</code> can point to a ZIP file, the URL of a ZIP file, or a local directory.</li><li><code>POSITION</code> specifies where to place the buildpack in the detection priority list.</li></ul>
+  user_org_creation: If enabled, this flag activates the **Create a New Org** link in the dropdown of the left navigation menu in Apps Manager.
+  user_provided_apps_man: <p class="note"><strong>Note</strong>&#58 The procedures in this topic use the Cloud Foundry Command Line Interface (cf CLI). You can also create user-provided service instances in Apps Manager from the Marketplace. To update existing user-provided service instances, navigate to the service instance page and select the <strong>Configuration</strong> tab.</p>
+  using_docker_link: For an explanation of how Docker works in TAS for VMs, see [Using Docker in TAS for VMs](../../adminguide/docker.html).
+  v3_cli_versions: The experimental commands described in this topic require Pivotal Cloud Foundry (PCF) v1.12 or later and the cf CLI v6.30.0 or later.
+  vm_note: <p class='note'><strong>Note</strong>&#58; The images below are based on the VM names in an open-source deployment of Cloud Foundry Application Runtime. In TAS for VMs, the processes interact in the same way, but are on different VMs. Correct VM names for each process are in the components sections of this topic.</p>
+  zdt_enable: Ensure that the **Disable rolling app deployments** checkbox is not enabled in the **Advanced Features** pane of the VMware Tanzu Application Service for VMs (TAS for VMs) tile.
+  zipkin_enable: "/pcf/core/2-12/zipkin-pcf-config"
+  zipkin_enable_link: <p>When Zipkin tracing is enabled in TAS for VMs, the Gorouter examines the HTTP request headers and performs the following:</p>
+  zipkin_tracing_link: For more information about Zipkin tracing, see [Enabling Zipkin Tracing](../adminguide/zipkin_tracing.html).
+  om_link: https://docs.pivotal.io/ops-manager/2-10
